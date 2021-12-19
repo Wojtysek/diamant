@@ -1,37 +1,29 @@
 ﻿#include <stdio.h>
 
 int main(void) {
-	//nasobilka
-	for (int j = 1; j <= 10; j++) {
-		
-		for (int i = 1; i <= 10; i++) {
-			printf("%4d", i * j);
-		}
-		printf("\n");
-	}
 	//diamant
-	//sikma plocha(horní 2)
-	for (int j = 1; j <= 9; j++) {
 
-		for (int i = 1; i <= j; i++) {
-			printf("%d ", i);
+	int mezera = 10;
+
+	//vlevo
+	for (int j = 0; j < 10; j++) {
+
+		for (int i = 0; i < mezera; i++) {
+			printf(" ");
+		}
+		for (int k = j; k >= 1; k--) {
+			printf("%d", k);
+		}
+
+		for (int k = 2; k <= j; k++) {
+			printf("%d", k);
 		}
 		printf("\n");
+		mezera--;
 	}
-	//sikma plocha(dolni 2)
-	for (int j = 8; j >= 1; j--) {
+	mezera = 0;
 
-		for (int i = 1; i <= j; i++) {
-			printf("%d ", i);
-		}
-		printf("\n");
-	}
-	//sikma plocha(horni 1)
-	for (int j = 1; j >= 9; j++) {
+	//vpravo
 
-		for (int i = 0; j <= 1; j++) {
-			printf("%d ", i);
-		}
-	}
 }
 
